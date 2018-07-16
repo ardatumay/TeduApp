@@ -14,25 +14,22 @@ import Menu from "./src/components/Menu";
 import Council from "./src/components/Council";
 import Calendar from "./src/components/Calendar";
 
-
 export default class App extends Component {
   render() {
-    return (
-      <RootStack /> 
-    );
+    return <RootStack />;
   }
 }
 
 const RootStack = createStackNavigator(
   {
-      NewsRoute: News,
-      MoodleRoute: Moodle,
-      MenuRoute: Menu,
-      CouncilRoute: Council,
-      CalandarRoute: Calendar,
+    NewsRoute: News,
+    MoodleRoute: Moodle,
+    MenuRoute: Menu,
+    CouncilRoute: Council,
+    CalandarRoute: Calendar
   },
-    {
-      //headerMode: 'none',
-      initialRouteName: "NewsRoute",
-    }
+  {
+    //headerMode: 'none',
+    initialRouteName: "NewsRoute"
+  }
 );
