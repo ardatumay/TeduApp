@@ -6,9 +6,11 @@
 
 import React, { Component } from "react";
 import Icon from "react-native-vector-icons/FontAwesome";
-import BottomToolbar from "react-native-bottom-toolbar";
+// import BottomToolbar from "react-native-bottom-toolbar";
 import { Image } from "react-native";
-
+import BottomNavigation, {
+  FullTab
+} from "react-native-material-bottom-navigation";
 
 const moodleIcon = <Image source={require("./img/moodle/m3.png")} />;
 
@@ -17,14 +19,15 @@ const calendarIcon = <Image source={require("./img/calendar/t3.png")} />;
 const newsIcon = <Image source={require("./img/news/n3.png")} />;
 //const councilIcon = <Image source={require("./img/calendar/t1.png")} />;
 
-
-const councilIcon = <Icon name="code" size={30} />;
+const councilIcon = <Icon name="code" color="red" size={30} />;
 
 class bottomToolbar extends Component {
-  
   render() {
     return (
-      <BottomToolbar style={styles.bottom} BottomToolbarProps={{color: "#202020" }}> 
+      <BottomToolbar
+        style={styles.bottom}
+        BottomToolbarProps={{ color: "#000000" }}
+      >
         <BottomToolbar.Action
           title="News"
           IconElement={newsIcon}
@@ -33,7 +36,6 @@ class bottomToolbar extends Component {
         <BottomToolbar.Action
           title="Moodle"
           IconElement={moodleIcon}
-          color="#B40431"
           onPress={() => this.props.navigation.navigate("MoodleRoute")}
         />
         <BottomToolbar.Action
@@ -58,8 +60,7 @@ class bottomToolbar extends Component {
 
 const styles = {
   bottom: {
-    bottom: 0,
-    
+    bottom: 0
   }
 };
 
