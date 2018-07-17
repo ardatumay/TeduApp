@@ -7,17 +7,19 @@
  */
 
 import React, { Component } from "react";
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, Dimensions } from "react-native";
+import Image from 'react-native-scalable-image';
 import BottomToolbarr from "./BottomToolbarr";
 
 class Council extends Component {
     static navigationOptions = {
+        headerTitle: (
+            <Image resizeMode="contain" width={Dimensions.get('window').width} style={{ marginTop: 40 }} source={require("./img/header/anatepe2.png")} />
+        ),
         title: "Council",
         headerStyle: { marginTop: 0, backgroundColor: "#fff" },
         headerLeft: null,
         gesturesEnabled: false,
-        headerMode: "none",
-
       };
   
     render() {
