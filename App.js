@@ -8,6 +8,7 @@
 
 import React, { Component } from "react";
 import { YellowBox } from "react-native";
+
 import { createStackNavigator } from "react-navigation";
 import News from "./src/components/News";
 import Moodle from "./src/components/Moodle";
@@ -189,3 +190,24 @@ export default class App extends Component {
     );
   }
 }
+/*
+  render() {
+    return (
+      <RootStack /> 
+    );
+  }
+}
+
+const RootStack = createStackNavigator(
+  {
+      NewsRoute: News,
+      MoodleRoute: Moodle,
+      MenuRoute: Menu,
+      CouncilRoute: Council,
+      CalendarRoute: Calendar,
+  },
+    {
+      //headerMode: 'none',
+      initialRouteName: "NewsRoute",
+    }
+);*/
